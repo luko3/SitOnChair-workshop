@@ -1,0 +1,58 @@
+nav, nav > .main-width, .first-menu {
+    display: flex;
+}
+nav, .second-menu {
+    background-color: black;
+}
+.colored_text {
+    color: map-get($colors, first-green);
+    font-weight: 700;
+}
+nav {
+    justify-content: center;
+    font: 400 15px Tahoma, sans-serif;
+    height: 40px;
+    color: white;
+    .main-width {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .first-menu {
+        align-items: flex-end;
+        list-style-type: none;
+        font-weight: 700;
+        font-size: 14px;
+        > li {
+            margin-left: 45px;
+        }
+        li {
+            cursor: pointer;
+        }
+        .menu-opener {
+            position: relative;
+            .second-menu {
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                display: none;
+                font: 400 16px Raleway, sans-serif;
+                padding: 15px;
+                height: 66px;
+                width: 90px;
+                top: 40px;
+                right: -43px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid black;
+                    top: -10px;
+                    left: 44px;
+                }
+            }
+        }
+    }
+}
